@@ -4,6 +4,7 @@ import { ScrollControls } from '@react-three/drei'
 import Navbar from './components/Navbar'
 import Galaxy from './components/Galaxy'
 import PageContent from './components/PageContent'
+import Contact from './components/sections/Contact'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -46,7 +47,7 @@ function App() {
       {/* โซน 3D Component */}
       <div style={{ width: '100vw', height: '100vh' }}>
         <Canvas camera={{ position: [0, 3, 5], fov: 60 }}>
-          <ScrollControls pages={4} damping={0.2}>
+          <ScrollControls pages={16} damping={0.2}>
             
             <group rotation={[-0.2, 0, 0]}>
               <Galaxy explode={explode} />
