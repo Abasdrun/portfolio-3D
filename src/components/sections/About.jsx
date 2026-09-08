@@ -253,7 +253,7 @@ export default function About() {
             </div>
 
             <div style={{ position: 'relative', zIndex: 2, transform: 'translateZ(30px)' }}>
-              <h3 style={{ fontSize: '1.8rem', color: 'white', margin: '0 0 5px 0', fontFamily: "'Playfair Display', serif" }}>Sripatum Univ.</h3>
+              <h3 style={{ fontSize: '1.8rem', color: 'white', margin: '0 0 5px 0', fontFamily: "'Playfair Display', serif" }}>Sripatum University</h3>
               <p style={{ color: '#cccccc', fontSize: '1rem', margin: '0 0 10px 0', lineHeight: '1.4' }}>Bachelor of Engineering in Computer Engineering</p>
               <p style={{ fontSize: '0.85rem', color: '#aaaaaa', letterSpacing: '1px', fontWeight: '500', margin: 0 }}>2023 – PRESENT</p>
             </div>
@@ -277,7 +277,7 @@ export default function About() {
             </div>
 
             <div style={{ position: 'relative', zIndex: 2, transform: 'translateZ(30px)' }}>
-              <h3 style={{ fontSize: '1.8rem', color: 'white', margin: '0 0 5px 0', fontFamily: "'Playfair Display', serif" }}>Kanjanasuksa</h3>
+              <h3 style={{ fontSize: '1.8rem', color: 'white', margin: '0 0 5px 0', fontFamily: "'Playfair Display', serif" }}>Kanjanasuksa Shcool</h3>
               <p style={{ color: '#cccccc', fontSize: '1rem', margin: '0 0 10px 0', lineHeight: '1.4' }}>Sciences and Mathematics Program</p>
               <p style={{ fontSize: '0.85rem', color: '#aaaaaa', letterSpacing: '1px', fontWeight: '500', margin: 0 }}>2020 – 2023</p>
             </div>
