@@ -3,7 +3,7 @@ import Home from './sections/Home'
 import About from './sections/About'
 import Projects from './sections/Projects'
 import Certificate from './sections/Certificate'
-import Contact from './sections/Contact' // <--- เพิ่มบรรทัดนี้เข้ามา
+import Contact from './sections/Contact'
 
 export default function PageContent({ explode }) {
   return (

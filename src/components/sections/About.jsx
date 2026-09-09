@@ -65,7 +65,6 @@ export default function About() {
     transformStyle: 'preserve-3d'
   })
 
-  // ควบคุมการเอียง 3D ตามเมาส์
   const handleMouseMove = (e) => {
     const card = e.currentTarget;
     const rect = card.getBoundingClientRect();
@@ -102,25 +101,23 @@ export default function About() {
     if (flare) flare.style.opacity = 0;
   };
 
-  // ดีไซน์สี่เหลี่ยมจัตุรัส แนวนอน
   const squareCardStyle = {
     flex: '1 1 320px', 
     aspectRatio: '1 / 1', 
     background: 'linear-gradient(145deg, rgba(12, 16, 26, 0.95) 0%, rgba(6, 9, 15, 0.95) 100%)',
     border: '1px solid rgba(255, 255, 255, 0.05)',
     borderRadius: '24px',
-    padding: '35px 30px 30px 30px', // ปรับ Padding บนลงมานิดหน่อยเพื่อให้โลโก้อยู่พอดี
+    padding: '35px 30px 30px 30px',
     position: 'relative',
     transformStyle: 'preserve-3d',
     cursor: 'default',
     boxShadow: '0 20px 40px rgba(0,0,0,0.4)',
     display: 'flex',
     flexDirection: 'column',
-    justifyContent: 'flex-start', // เปลี่ยนเป็นเริ่มจากด้านบน
-    gap: '20px' // ระยะห่างระหว่างส่วนต่างๆ ข้างใน
+    justifyContent: 'flex-start',
+    gap: '20px'
   };
 
-  // โลโก้ด้านในกล่อง (ไม่ลอยตัดขอบแล้ว)
   const innerLogoStyle = {
     width: '65px',
     height: '65px',
@@ -129,19 +126,19 @@ export default function About() {
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-    padding: '8px', // ลด Padding ลง เพื่อให้รูปข้างในขยายได้เต็มที่
+    padding: '8px',
     boxShadow: '0 10px 20px rgba(0,0,0,0.3), 0 0 15px rgba(255,255,255,0.05)',
-    transform: 'translateZ(35px)' // ยังให้เด้งลอยขึ้นมาเป็น 3D อยู่
+    transform: 'translateZ(35px)'
   };
 
   return (
-    <div id="about" ref={sectionRef} style={{ minHeight: '200vh', padding: '10vh 5vw', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+    // เปลี่ยนฟอนต์ทั้งหน้าให้คลีนแบบหน้าอื่นๆ
+    <div id="about" ref={sectionRef} style={{ minHeight: '200vh', padding: '10vh 5vw', display: 'flex', flexDirection: 'column', alignItems: 'center', fontFamily: "Inter, 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" }}>
       
       {/* ================= โซนที่ 1: Profile & Skills ================= */}
       <div style={{
         display: 'flex', alignItems: 'center', justifyContent: 'center',
         gap: '5vw', width: '100%', maxWidth: '1400px', flexWrap: 'wrap',
-        fontFamily: "'Space Grotesk', 'Kanit', sans-serif",
         marginBottom: '150px' 
       }}>
         <div style={{ ...slideIn(0.1, 'left'), flex: '1.5 1 500px', display: 'flex', justifyContent: 'center', alignItems: 'flex-end' }}>
@@ -156,11 +153,22 @@ export default function About() {
 
         <div style={{ flex: '1 1 500px', zIndex: 10 }}>
           <div style={slideIn(0.3, 'right')}>
-            <h2 style={{ fontSize: '4.5rem', margin: '0 0 5px 0', fontFamily: "'Playfair Display', serif", fontWeight: '700', color: 'white', textShadow: '0px 0px 20px rgba(255,255,255,0.5)' }}>
+            <h2 style={{ fontSize: '4.5rem', margin: '0 0 5px 0', fontWeight: '800', color: 'white', letterSpacing: '-1px' }}>
               Abasdrun Maeha
             </h2>
-            <p style={{ fontSize: '1.5rem', color: '#00ddff', margin: '0 0 45px 0', fontWeight: '500', letterSpacing: '1px', fontFamily: "'Playfair Display', serif" }}>
+            <p style={{ fontSize: '1.4rem', color: '#00ddff', margin: '0 0 25px 0', fontWeight: '600', letterSpacing: '0.5px' }}>
               Computer Engineering Student
+            </p>
+
+            {/* เพิ่มส่วน About me จากในรูปที่ส่งมา */}
+            <p style={{ 
+              color: '#cbd5e1', 
+              fontSize: '1.1rem', 
+              lineHeight: '1.8', 
+              margin: '0 0 40px 0', 
+              maxWidth: '95%' 
+            }}>
+              4th-year Computer Engineering student (GPAX 3.77) seeking a 4-month Co-op placement. Specialized in end-to-end development, combining Full-Stack apps, AWS Cloud, and Industrial IoT. Experienced in integrating hardware (ESP32, Raspberry Pi) with complex backends and ML models to build scalable automation solutions.
             </p>
           </div>
 
@@ -172,8 +180,8 @@ export default function About() {
               <img src={mbtiIcon} alt="ENTJ Icon" style={{ width: '130px', height: '130px', objectFit: 'contain', filter: 'drop-shadow(0 0 15px rgba(0, 221, 255, 0.4))' }} />
               <div>
                 <p style={{ margin: '0 0 5px 0', color: '#aaaaaa', fontSize: '1rem' }}>ประเภทบุคลิกภาพ MBTI :</p>
-                <h4 style={{ margin: '0 0 8px 0', color: 'white', fontSize: '1.4rem', fontWeight: '600' }}>ผู้บัญชาการ (ENTJ-A)</h4>
-                <p style={{ margin: 0, color: '#cccccc', fontSize: '1.1rem', lineHeight: '1.5', fontStyle: 'italic' }}>
+                <h4 style={{ margin: '0 0 8px 0', color: 'white', fontSize: '1.4rem', fontWeight: '700' }}>ผู้บัญชาการ (ENTJ-A)</h4>
+                <p style={{ margin: 0, color: '#cccccc', fontSize: '1.05rem', lineHeight: '1.6', fontStyle: 'italic' }}>
                   "ผู้บัญชาการกล้าหาญ มีจินตนาการ และมีปณิธานกล้าแกร่ง มักหาทางออกหรือสร้างทางออกขึ้นมาได้"
                 </p>
               </div>
@@ -181,7 +189,7 @@ export default function About() {
           </div>
 
           <div style={slideIn(0.7, 'up')}>
-            <p style={{ margin: '0 0 15px 0', color: '#aaaaaa', fontSize: '1.1rem', fontWeight: '500' }}>Technical Skills & Tools :</p>
+            <p style={{ margin: '0 0 15px 0', color: '#aaaaaa', fontSize: '1.1rem', fontWeight: '600' }}>Technical Skills & Tools :</p>
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: '12px' }}>
               {skills.map((skill, index) => (
                 <div key={skill.name} style={{
@@ -205,33 +213,31 @@ export default function About() {
         </div>
       </div>
 
-      {/* ================= โซนที่ 2: Experience & Education (3 Square Cards แนวนอน - โลโก้ในกรอบ) ================= */}
-      <div style={{ width: '100%', maxWidth: '1200px', fontFamily: "'Space Grotesk', 'Kanit', sans-serif", paddingTop: '5vh', paddingBottom: '150px' }}>
+      {/* ================= โซนที่ 2: Experience & Education ================= */}
+      <div style={{ width: '100%', maxWidth: '1200px', paddingTop: '5vh', paddingBottom: '150px' }}>
         
         <div style={popIn3D(0.2)}>
-          <h2 style={{ fontSize: '2.5rem', color: 'white', margin: '0 0 60px 0', fontFamily: "'Playfair Display', serif", textAlign: 'center' }}>
+          <h2 style={{ fontSize: '3rem', color: 'white', margin: '0 0 60px 0', fontWeight: '800', letterSpacing: '-0.5px', textAlign: 'center' }}>
             Experience & Education
           </h2>
         </div>
 
-        {/* แถวแนวนอน */}
         <div style={{ display: 'flex', justifyContent: 'center', gap: '30px', flexWrap: 'wrap' }}>
           
           {/* --- 1. Work: 7-Eleven --- */}
           <div style={{ ...popIn3D(0.3), ...squareCardStyle }} onMouseMove={handleMouseMove} onMouseLeave={handleMouseLeave}>
             <div className="flare-light" style={{ position: 'absolute', width: '400px', height: '400px', background: 'radial-gradient(circle, rgba(0, 221, 255, 0.08) 0%, transparent 60%)', borderRadius: '50%', pointerEvents: 'none', opacity: 0, transition: 'opacity 0.4s ease', zIndex: 0 }}></div>
             
-            {/* Header Card: โลโก้ ซ้าย / ป้าย Tag ขวา */}
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', position: 'relative', zIndex: 2 }}>
               <div style={innerLogoStyle}>
                 <img src={sevenElevenLogo} alt="7-Eleven" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
               </div>
-              <span style={{ fontSize: '0.8rem', background: 'rgba(255,255,255,0.1)', padding: '6px 14px', borderRadius: '20px', color: '#fff', letterSpacing: '1px', transform: 'translateZ(20px)' }}>WORK</span>
+              <span style={{ fontSize: '0.8rem', background: 'rgba(255,255,255,0.1)', padding: '6px 14px', borderRadius: '20px', color: '#fff', letterSpacing: '1px', fontWeight: '600', transform: 'translateZ(20px)' }}>WORK</span>
             </div>
 
             <div style={{ position: 'relative', zIndex: 2, transform: 'translateZ(30px)' }}>
-              <h3 style={{ fontSize: '1.8rem', color: 'white', margin: '0 0 5px 0', fontFamily: "'Playfair Display', serif" }}>7-Eleven</h3>
-              <h4 style={{ fontSize: '1.1rem', color: '#00ddff', margin: '0 0 10px 0', fontWeight: '500' }}>Store Assistant</h4>
+              <h3 style={{ fontSize: '1.6rem', color: 'white', margin: '0 0 5px 0', fontWeight: '700', letterSpacing: '-0.5px' }}>7-Eleven</h3>
+              <h4 style={{ fontSize: '1.1rem', color: '#00ddff', margin: '0 0 10px 0', fontWeight: '600' }}>Store Assistant</h4>
               <p style={{ fontSize: '0.85rem', color: '#aaaaaa', letterSpacing: '1px', fontWeight: '500', margin: '0 0 15px 0' }}>MAY 2023 – JAN 2026</p>
             </div>
 
@@ -249,12 +255,12 @@ export default function About() {
               <div style={innerLogoStyle}>
                 <img src={spuLogo} alt="SPU" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
               </div>
-              <span style={{ fontSize: '0.8rem', background: 'rgba(255,255,255,0.1)', padding: '6px 14px', borderRadius: '20px', color: '#fff', letterSpacing: '1px', transform: 'translateZ(20px)' }}>DEGREE</span>
+              <span style={{ fontSize: '0.8rem', background: 'rgba(255,255,255,0.1)', padding: '6px 14px', borderRadius: '20px', color: '#fff', letterSpacing: '1px', fontWeight: '600', transform: 'translateZ(20px)' }}>DEGREE</span>
             </div>
 
             <div style={{ position: 'relative', zIndex: 2, transform: 'translateZ(30px)' }}>
-              <h3 style={{ fontSize: '1.8rem', color: 'white', margin: '0 0 5px 0', fontFamily: "'Playfair Display', serif" }}>Sripatum University</h3>
-              <p style={{ color: '#cccccc', fontSize: '1rem', margin: '0 0 10px 0', lineHeight: '1.4' }}>Bachelor of Engineering in Computer Engineering</p>
+              <h3 style={{ fontSize: '1.6rem', color: 'white', margin: '0 0 5px 0', fontWeight: '700', letterSpacing: '-0.5px' }}>Sripatum University</h3>
+              <p style={{ color: '#cccccc', fontSize: '1rem', margin: '0 0 10px 0', lineHeight: '1.5' }}>Bachelor of Engineering in Computer Engineering</p>
               <p style={{ fontSize: '0.85rem', color: '#aaaaaa', letterSpacing: '1px', fontWeight: '500', margin: 0 }}>2023 – PRESENT</p>
             </div>
 
@@ -273,12 +279,12 @@ export default function About() {
               <div style={innerLogoStyle}>
                 <img src={kpsLogo} alt="KPS" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
               </div>
-              <span style={{ fontSize: '0.8rem', background: 'rgba(255,255,255,0.1)', padding: '6px 14px', borderRadius: '20px', color: '#fff', letterSpacing: '1px', transform: 'translateZ(20px)' }}>HIGH SCHOOL</span>
+              <span style={{ fontSize: '0.8rem', background: 'rgba(255,255,255,0.1)', padding: '6px 14px', borderRadius: '20px', color: '#fff', letterSpacing: '1px', fontWeight: '600', transform: 'translateZ(20px)' }}>HIGH SCHOOL</span>
             </div>
 
             <div style={{ position: 'relative', zIndex: 2, transform: 'translateZ(30px)' }}>
-              <h3 style={{ fontSize: '1.8rem', color: 'white', margin: '0 0 5px 0', fontFamily: "'Playfair Display', serif" }}>Kanjanasuksa Shcool</h3>
-              <p style={{ color: '#cccccc', fontSize: '1rem', margin: '0 0 10px 0', lineHeight: '1.4' }}>Sciences and Mathematics Program</p>
+              <h3 style={{ fontSize: '1.6rem', color: 'white', margin: '0 0 5px 0', fontWeight: '700', letterSpacing: '-0.5px' }}>Kanjanasuksa Shcool</h3>
+              <p style={{ color: '#cccccc', fontSize: '1rem', margin: '0 0 10px 0', lineHeight: '1.5' }}>Sciences and Mathematics Program</p>
               <p style={{ fontSize: '0.85rem', color: '#aaaaaa', letterSpacing: '1px', fontWeight: '500', margin: 0 }}>2020 – 2023</p>
             </div>
 

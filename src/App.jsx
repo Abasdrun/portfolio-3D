@@ -4,14 +4,20 @@ import { ScrollControls } from '@react-three/drei'
 import Navbar from './components/Navbar'
 import Galaxy from './components/Galaxy'
 import PageContent from './components/PageContent'
-import Contact from './components/sections/Contact'
 
 function App() {
   const [count, setCount] = useState(0)
   const [explode, setExplode] = useState(false)
   const [hideNumber, setHideNumber] = useState(false)
 
+  // 1. เพิ่ม State เช็คว่าเป็นมือถือหรือไม่ (จอเล็กกว่า 768px)
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768)
+
   useEffect(() => {
+    // 2. อัปเดตค่าทันทีที่มีการย่อ/ขยายจอ
+    const handleResize = () => setIsMobile(window.innerWidth < 768)
+    window.addEventListener('resize', handleResize)
+
     const interval = setInterval(() => {
       setCount((prev) => {
         if (prev >= 100) {
@@ -23,7 +29,11 @@ function App() {
         return prev + 2
       })
     }, 20)
-    return () => clearInterval(interval)
+    
+    return () => {
+      clearInterval(interval)
+      window.removeEventListener('resize', handleResize)
+    }
   }, [])
 
   return (
@@ -47,7 +57,8 @@ function App() {
       {/* โซน 3D Component */}
       <div style={{ width: '100vw', height: '100vh' }}>
         <Canvas camera={{ position: [0, 3, 5], fov: 60 }}>
-          <ScrollControls pages={16} damping={0.2}>
+          {/* 3. ถ้าเป็นมือถือ ให้ยาว 26 หน้า ถ้าคอมให้ยาว 16 หน้า */}
+          <ScrollControls pages={isMobile ? 26 : 16} damping={0.2}>
             
             <group rotation={[-0.2, 0, 0]}>
               <Galaxy explode={explode} />
