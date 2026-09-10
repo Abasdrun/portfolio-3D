@@ -368,7 +368,7 @@ export default function Contact() {
 
               {/* ปุ่มเปิด Resume PDF */}
               <a 
-                href="https://drive.google.com/file/d/1a_I6Q6e_OhL55H5VcUbmSnQF1quye_bc/view?usp=sharing" /* <-- เปลี่ยนชื่อไฟล์ PDF ตรงนี้ให้ตรงกับในโฟลเดอร์ public */
+                href="https://drive.google.com/file/d/1ksEalYmkyEConLoP7bfRuWDg3xE99NBK/view?usp=sharing" /* <-- เปลี่ยนชื่อไฟล์ PDF ตรงนี้ให้ตรงกับในโฟลเดอร์ public */
                 target="_blank" 
                 rel="noreferrer" 
                 className="resume-btn"
