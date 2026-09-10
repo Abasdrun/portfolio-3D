@@ -1,5 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import emailjs from '@emailjs/browser' 
+// โหลดไอคอนแบรนด์ของจริงมาจาก react-icons
+import { FaGithub, FaLinkedinIn, FaFacebookF, FaLine, FaFileDownload } from 'react-icons/fa'
 
 export default function Contact() {
   const sectionRef = useRef()
@@ -125,6 +127,34 @@ export default function Contact() {
           cursor: not-allowed;
         }
 
+        /* ---------------- ปุ่มดาวน์โหลด Resume ---------------- */
+        .resume-btn {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 10px;
+          width: 100%;
+          background: transparent;
+          border: 1px solid #FFD700;
+          color: #FFD700;
+          padding: 15px 30px;
+          font-size: 1rem;
+          font-weight: 600;
+          letter-spacing: 1px;
+          border-radius: 8px;
+          cursor: pointer;
+          transition: all 0.3s ease;
+          text-transform: uppercase;
+          text-decoration: none;
+          margin-top: 15px;
+        }
+        .resume-btn:hover {
+          background: #FFD700;
+          color: #050a0f;
+          box-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+          transform: translateY(-2px);
+        }
+
         .contact-item {
           display: flex;
           align-items: center;
@@ -158,6 +188,7 @@ export default function Contact() {
           border-color: #00ddff;
         }
 
+        /* ---------------- Social Icons & Brand Colors ---------------- */
         .social-icon-btn {
           display: flex;
           justify-content: center;
@@ -171,11 +202,33 @@ export default function Contact() {
           transition: all 0.3s ease;
           border: 1px solid rgba(255, 255, 255, 0.05);
         }
-        .social-icon-btn:hover {
-          background: rgba(0, 221, 255, 0.1);
-          color: #00ddff;
-          border-color: #00ddff;
-          box-shadow: 0 0 15px rgba(0, 221, 255, 0.2);
+        /* สีตอน Hover แยกตามแบรนด์ */
+        .social-icon-btn.github:hover {
+          background: white;
+          color: black;
+          border-color: white;
+          box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+          transform: translateY(-3px);
+        }
+        .social-icon-btn.linkedin:hover {
+          background: #0077b5;
+          color: white;
+          border-color: #0077b5;
+          box-shadow: 0 0 15px rgba(0, 119, 181, 0.4);
+          transform: translateY(-3px);
+        }
+        .social-icon-btn.facebook:hover {
+          background: #1877F2;
+          color: white;
+          border-color: #1877F2;
+          box-shadow: 0 0 15px rgba(24, 119, 242, 0.4);
+          transform: translateY(-3px);
+        }
+        .social-icon-btn.line:hover {
+          background: #00B900;
+          color: white;
+          border-color: #00B900;
+          box-shadow: 0 0 15px rgba(0, 185, 0, 0.4);
           transform: translateY(-3px);
         }
 
@@ -206,7 +259,7 @@ export default function Contact() {
           ...popIn3D(0.3),
           width: '100%',
           maxWidth: '1100px',
-          background: '#141824', /* เปลี่ยนสีพื้นหลังให้คลีนเหมือนหน้าใบเซอร์ */
+          background: '#141824', 
           border: '1px solid rgba(255, 255, 255, 0.05)',
           borderRadius: '20px',
           padding: '50px',
@@ -260,14 +313,17 @@ export default function Contact() {
             <div style={{ marginTop: '10px', padding: '0 15px' }}>
               <p style={{ margin: '0 0 12px 0', color: '#8892b0', fontSize: '0.85rem' }}>Social Profiles</p>
               <div style={{ display: 'flex', gap: '12px' }}>
-                <a href="https://github.com/Abasdrun" target="_blank" rel="noreferrer" className="social-icon-btn" title="GitHub">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                <a href="https://github.com/Abasdrun" target="_blank" rel="noreferrer" className="social-icon-btn github" title="GitHub">
+                  <FaGithub size={20} />
                 </a>
-                <a href="https://www.linkedin.com/in/abasdrun-maeha/" target="_blank" rel="noreferrer" className="social-icon-btn" title="LinkedIn">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                <a href="https://www.linkedin.com/in/abasdrun-maeha/" target="_blank" rel="noreferrer" className="social-icon-btn linkedin" title="LinkedIn">
+                  <FaLinkedinIn size={18} />
                 </a>
-                <a href="https://www.facebook.com/abasdroon.maeha/" target="_blank" rel="noreferrer" className="social-icon-btn" title="Facebook">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3.8l.2-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+                <a href="https://www.facebook.com/abasdroon.maeha/" target="_blank" rel="noreferrer" className="social-icon-btn facebook" title="Facebook">
+                  <FaFacebookF size={18} />
+                </a>
+                <a href="https://line.me/ti/p/UtYAq0lyxF" target="_blank" rel="noreferrer" className="social-icon-btn line" title="LINE"> {/* เปลี่ยนลิงก์เป็นไอดี LINE จริง */}
+                  <FaLine size={22} />
                 </a>
               </div>
             </div>
@@ -309,6 +365,16 @@ export default function Contact() {
               >
                 {isSubmitting ? 'Sending...' : submitStatus === 'success' ? 'Sent Successfully! ✅' : submitStatus === 'error' ? 'Error! Try Again ❌' : 'Send Message'}
               </button>
+
+              {/* ปุ่มเปิด Resume PDF */}
+              <a 
+                href="https://drive.google.com/file/d/1a_I6Q6e_OhL55H5VcUbmSnQF1quye_bc/view?usp=sharing" /* <-- เปลี่ยนชื่อไฟล์ PDF ตรงนี้ให้ตรงกับในโฟลเดอร์ public */
+                target="_blank" 
+                rel="noreferrer" 
+                className="resume-btn"
+              >
+                <FaFileDownload size={18} /> Get My Resume
+              </a>
             </form>
           </div>
 
