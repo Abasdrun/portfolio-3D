@@ -30,8 +30,8 @@ export default function Projects() {
       techStack: ['React Native', 'Expo', 'Supabase', 'Figma'],
       techStackText: 'React Native, Expo (EAS Build), Supabase (PostgreSQL), Figma',
       actionLinks: [
-        { type: 'code', label: 'Code', url: 'https://github.com/Abasdrun' },
-        { type: 'document', label: 'Document', url: 'https://docs.google.com' }
+        { type: 'code', label: 'Code', url: 'https://github.com/Abasdrun/railgo-mobile-app.git' },
+        { type: 'document', label: 'Document', url: 'https://drive.google.com/file/d/19fO4TKNVRfWkKsVotI8hirt0ISs7dtKZ/view?usp=sharing' }
       ],
       height: '400px',
       image: `${imgBaseUrl}/project-1-railgo/cover.png`,
@@ -44,8 +44,8 @@ export default function Projects() {
       ],
       outcome: 'ได้แอปพลิเคชันที่สามารถติดตั้งและทดสอบการใช้งานจริงบนระบบปฏิบัติการ Android ได้ พร้อมโครงสร้าง Backend ที่แข็งแรง สามารถรองรับข้อมูลการเดินรถและจัดการสถานะที่นั่งได้อย่างมีประสิทธิภาพ',
       gallery: [
-        { type: 'youtube', url: 'https://www.youtube.com/embed/dQw4w9WgXcQ' }, 
-        { type: 'youtube', url: 'https://www.youtube.com/embed/dQw4w9WgXcQ' }
+        { type: 'youtube', url: 'https://www.youtube.com/embed/cckhdFlX4fw' }, 
+        { type: 'youtube', url: 'https://www.youtube.com/embed/q6aucc7jgsc?si' }
       ]
     },
     {
@@ -56,8 +56,8 @@ export default function Projects() {
       techStack: ['React Native', 'Python', 'Supabase', 'Figma'],
       techStackText: 'React Native, Python, Supabase, Figma, Constraint Satisfaction Algorithm',
       actionLinks: [
-        { type: 'code', label: 'Code', url: 'https://github.com/Abasdrun' },
-        { type: 'document', label: 'Document', url: 'https://docs.google.com' }
+        { type: 'code', label: 'Code', url: 'https://github.com/Abasdrun/ai-course-scheduler-backend.git' },
+        { type: 'document', label: 'Document', url: 'https://drive.google.com/file/d/1gfR9dL2lPNfP-PMNDODlZg5rPT9PHARH/view?usp=sharing' }
       ],
       height: '320px',
       image: `${imgBaseUrl}/project-2-schedule/cover.png`,
@@ -70,8 +70,8 @@ export default function Projects() {
       ],
       outcome: 'ได้แอปพลิเคชันต้นแบบที่สามารถประมวลผลและนำเสนอทางเลือกตารางเรียนที่ไม่ทับซ้อนกันได้ 3-5 รูปแบบทันที พร้อมระบบจัดการฐานข้อมูลที่มีความเสถียร รองรับเงื่อนไขรายวิชาที่ซับซ้อนได้ตรงตามความต้องการของผู้ใช้งานจริง',
       gallery: [
-        { type: 'image', url: `${imgBaseUrl}/project-2-schedule/detail-1.png` },
-        { type: 'image', url: `${imgBaseUrl}/project-2-schedule/detail-2.png` }
+        { type: 'youtube', url: 'https://www.youtube.com/embed/6zvsJGKc_m0' }, 
+        { type: 'youtube', url: 'https://www.youtube.com/embed/tPWjvyDQKwE?si' }
       ]
     },
     {
@@ -82,7 +82,7 @@ export default function Projects() {
       techStack: ['Hardware'],
       techStackText: 'Digital Logic ICs (74HC04, 74HC08, 74HC32), Tinkercad Simulation, Karnaugh Map (K-Map), Breadboard',
       actionLinks: [
-        { type: 'document', label: 'Document', url: 'https://docs.google.com' }
+        { type: 'document', label: 'Document', url: 'https://drive.google.com/file/d/1hD0k0DfRokqzm6oIUXKN3VIXOTXhMbNi/view?usp=sharing' }
       ],
       height: '350px',
       image: `${imgBaseUrl}/project-3-robot/cover.png`,
@@ -95,8 +95,12 @@ export default function Projects() {
       ],
       outcome: 'ได้หุ่นยนต์เดินตามเส้นที่สามารถทำงานได้จริงผ่านการประมวลผลระดับฮาร์ดแวร์ แสดงให้เห็นถึงความเข้าใจอย่างลึกซึ้งในรากฐานของ Digital System Design และทักษะการแก้ปัญหาฮาร์ดแวร์ (Troubleshooting) หน้างานจากการลองผิดลองถูก',
       gallery: [
-        { type: 'image', url: `${imgBaseUrl}/project-3-robot/detail-1.png` },
-        { type: 'image', url: `${imgBaseUrl}/project-3-robot/detail-2.png` }
+        { type: 'image', url: `${imgBaseUrl}/project-3-robot/detail-1.jpg` },
+        { type: 'image', url: `${imgBaseUrl}/project-3-robot/detail-2.jpg` },
+        { type: 'image', url: `${imgBaseUrl}/project-3-robot/detail-3.png` },
+        { type: 'image', url: `${imgBaseUrl}/project-3-robot/detail-4.jpg` },
+        { type: 'youtube', url: 'https://www.youtube.com/embed/Ln73sW-_Xqw' }, 
+        { type: 'youtube', url: 'https://www.youtube.com/embed/w9K9iumQLmg' }
       ]
     },
     {
@@ -107,7 +111,7 @@ export default function Projects() {
       techStack: ['ESP32', 'C/C++', 'Arduino', 'MQTT', 'ThingsBoard', 'Hardware'],
       techStackText: 'ESP32, C/C++ (Arduino), MQTT Protocol, ThingsBoard (Cloud Platform), EasyEDA (PCB Design), Sensors (TDS, pH, DS18B20), Actuators (Relays, Water Pumps, DC Motors)',
       actionLinks: [
-        { type: 'document', label: 'Document', url: 'https://docs.google.com' }
+        { type: 'document', label: 'Document', url: 'https://drive.google.com/file/d/1n8Yg9GqtDzTde58m216fmK46GaLFyxnB/view?usp=sharing' }
       ],
       height: '420px',
       image: `${imgBaseUrl}/project-4-wolffia/cover.png`,
@@ -120,9 +124,12 @@ export default function Projects() {
       ],
       outcome: 'ได้ระบบสมาร์ทฟาร์มต้นแบบที่ทำงานได้จริงและเสถียร ครบถ้วนทั้งฮาร์ดแวร์ที่ออกแบบมาโดยเฉพาะ และระบบคลาวด์ที่ตรวจสอบได้ตลอดเวลา',
       gallery: [
-        { type: 'image', url: `${imgBaseUrl}/project-4-wolffia/detail-1.png` },
-        { type: 'image', url: `${imgBaseUrl}/project-4-wolffia/detail-2.png` },
-        { type: 'image', url: `${imgBaseUrl}/project-4-wolffia/detail-3.png` }
+        { type: 'image', url: `${imgBaseUrl}/project-4-wolffia/detail-1.jpg` },
+        { type: 'image', url: `${imgBaseUrl}/project-4-wolffia/detail-2.jpg` },
+        { type: 'image', url: `${imgBaseUrl}/project-4-wolffia/detail-3.jpg` },
+        { type: 'image', url: `${imgBaseUrl}/project-4-wolffia/detail-4.jpg` },
+        { type: 'image', url: `${imgBaseUrl}/project-4-wolffia/detail-5.jpg` },
+        { type: 'image', url: `${imgBaseUrl}/project-4-wolffia/detail-6.jpg` }
       ]
     },
     {
@@ -147,8 +154,7 @@ export default function Projects() {
       outcome: 'ได้ระบบเทรดอัตโนมัติที่มีความเสถียรระดับ Financial Grade ช่วยกำจัดอารมณ์ความรู้สึกในการเทรด (Emotionless Trading) ตัวระบบทนทานต่อข้อผิดพลาด (Fault-Tolerant) และสะท้อนให้เห็นทักษะการพัฒนาระบบครบวงจร',
       gallery: [
         { type: 'image', url: `${imgBaseUrl}/project-5-binance/detail-1.png` },
-        { type: 'image', url: `${imgBaseUrl}/project-5-binance/detail-2.png` },
-        { type: 'image', url: `${imgBaseUrl}/project-5-binance/detail-3.png` }
+        { type: 'image', url: `${imgBaseUrl}/project-5-binance/detail-2.png` }
       ]
     },
     {
@@ -159,7 +165,7 @@ export default function Projects() {
       techStack: ['ESP32', 'C/C++', 'Hardware', 'MQTT', 'Blynk'],
       techStackText: 'ESP32, C/C++ (Arduino IDE), Blynk App, MQTT, LINE Notify API, Google Assistant API, เซนเซอร์ DHT22 (วัดอุณหภูมิ/ความชื้น), Relay, HLK-5M05 (Step-down), PCB & 3D Design Tools',
       actionLinks: [
-        { type: 'document', label: 'Document', url: 'https://docs.google.com' }
+        { type: 'document', label: 'Document', url: 'https://drive.google.com/file/d/1tq7UCXiulVU3HNAHWv10DOJU7dqBMhGg/view?usp=sharing' }
       ],
       height: '360px',
       image: `${imgBaseUrl}/project-6-plug/cover.png`,
@@ -171,8 +177,7 @@ export default function Projects() {
       ],
       outcome: 'ได้ชิ้นงานปลั๊กไฟอัจฉริยะต้นแบบที่ใช้งานได้จริงและมีความปลอดภัยสูง ถือเป็นโปรเจ็คที่ช่วยปูรากฐานความเข้าใจที่แข็งแกร่งในสถาปัตยกรรมระบบ IoT และการบูรณาการฮาร์ดแวร์เข้ากับซอฟต์แวร์',
       gallery: [
-        { type: 'image', url: `${imgBaseUrl}/project-6-plug/detail-1.png` },
-        { type: 'image', url: `${imgBaseUrl}/project-6-plug/detail-2.png` }
+        { type: 'youtube', url: 'https://www.youtube.com/embed/CRSRXAACwGQ' }
       ]
     },
     {
@@ -183,7 +188,7 @@ export default function Projects() {
       techStack: ['SQL', 'MySQL', 'Python'],
       techStackText: 'MySQL, Python (Tkinter), Relational Database Design, ER-Diagram, Data Dictionary',
       actionLinks: [
-        { type: 'document', label: 'Document', url: 'https://docs.google.com' }
+        { type: 'document', label: 'Document', url: 'https://drive.google.com/file/d/1cnFS_Fj53VB4f8FK1pIC3Lcs-oZgphj7/view?usp=sharing' }
       ],
       height: '380px',
       image: `${imgBaseUrl}/project-7-coffee/cover.png`,
@@ -197,7 +202,8 @@ export default function Projects() {
       outcome: 'ได้โครงสร้างฐานข้อมูลที่ได้มาตรฐาน สามารถรองรับการขยายตัวของธุรกิจได้ในอนาคต พร้อมทั้งมีแอปพลิเคชันต้นแบบที่สามารถประมวลผล ดึงข้อมูล และจัดการสต๊อกสินค้าได้อย่างถูกต้องแม่นยำ',
       gallery: [
         { type: 'image', url: `${imgBaseUrl}/project-7-coffee/detail-1.png` },
-        { type: 'image', url: `${imgBaseUrl}/project-7-coffee/detail-2.png` }
+        { type: 'image', url: `${imgBaseUrl}/project-7-coffee/detail-2.png` },
+        { type: 'youtube', url: 'https://www.youtube.com/embed/S_R9W8Fy_Ho' }
       ]
     },
     {
@@ -208,7 +214,7 @@ export default function Projects() {
       techStack: ['Microsoft Word'],
       techStackText: 'Software Development Life Cycle (SDLC), Requirement Engineering, System Architecture Design, IT Service Management',
       actionLinks: [
-        { type: 'document', label: 'Document', url: 'https://docs.google.com' }
+        { type: 'document', label: 'Document', url: 'https://drive.google.com/drive/folders/1ayuxiosyr0sakPGyVofm5TmC_h-a8qKv?usp=sharing' }
       ],
       height: '320px',
       image: `${imgBaseUrl}/project-8-DEC/cover.png`,
@@ -221,7 +227,9 @@ export default function Projects() {
       ],
       outcome: 'ได้ชุดเอกสารการพัฒนาระบบซอฟต์แวร์ที่ครบถ้วนและเป็นมาตรฐานมืออาชีพ พร้อมส่งมอบให้ทีม Development นำไปพัฒนาต่อได้จริง แสดงให้เห็นถึงมุมมองการบริหารจัดการระบบภาพรวม',
       gallery: [
-        { type: 'image', url: `${imgBaseUrl}/project-8-DEC/detail-1.png` }
+        { type: 'image', url: `${imgBaseUrl}/project-8-DEC/detail-1.png` },
+        { type: 'image', url: `${imgBaseUrl}/project-8-DEC/detail-2.png` },
+        { type: 'image', url: `${imgBaseUrl}/project-8-DEC/detail-3.png` }
       ]
     },
     {
@@ -232,8 +240,8 @@ export default function Projects() {
       techStack: ['Make.com', 'Google AI Studio', 'Google Sheets', 'Facebook', 'Telegram'],
       techStackText: 'Make.com (Integromat), Google AI Studio (Gemini API), Google Sheets, Facebook Page API, Telegram Bot API',
       actionLinks: [
-        { type: 'facebook', label: 'Facebook Page', url: 'https://facebook.com' },
-        { type: 'make', label: 'Make.com', url: 'https://make.com' }
+        { type: 'facebook', label: 'Facebook Page', url: 'https://www.facebook.com/share/1LEQ3GjmkY/' },
+        { type: 'make', label: 'Make.com', url: 'https://eu1.make.com/public/shared-scenario/mPIlDsskb1W/integration-google-sheets-google-gemini' }
       ],
       height: '420px',
       image: `${imgBaseUrl}/project-9-affiliate/cover.png`,
@@ -246,8 +254,9 @@ export default function Projects() {
       ],
       outcome: 'สร้างระบบผลิตรายได้แบบ Passive Income ที่ทำงานแทนคนได้จริง ช่วยประหยัดเวลาในการบริหารจัดการโซเชียลมีเดียได้อย่างมหาศาล และรักษาความสม่ำเสมอในการโพสต์คอนเทนต์ได้อย่างมีประสิทธิภาพ',
       gallery: [
-        { type: 'image', url: `${imgBaseUrl}/project-9-affiliate/detail-1.png` },
-        { type: 'image', url: `${imgBaseUrl}/project-9-affiliate/detail-2.png` }
+        { type: 'image', url: `${imgBaseUrl}/project-9-affiliate/detail-2.png` },
+        { type: 'image', url: `${imgBaseUrl}/project-9-affiliate/detail-3.png` },
+        { type: 'image', url: `${imgBaseUrl}/project-9-affiliate/detail-4.png` }
       ]
     },
     {
@@ -258,7 +267,7 @@ export default function Projects() {
       techStack: ['Cisco Packet Tracer', 'Node-RED', 'ThingsBoard', 'Microsoft Word'],
       techStackText: 'LoRaWAN (AS923 Standard), Cisco Infrastructure (Catalyst IR1101, IE3300), ThingsBoard, Node-RED, Network Simulation',
       actionLinks: [
-        { type: 'document', label: 'Document', url: 'https://docs.google.com' }
+        { type: 'document', label: 'Document', url: 'https://drive.google.com/drive/folders/11WjmPPZhNPpWHjEw7alENo0KBhMWrRJD?usp=sharing' }
       ],
       height: '350px',
       image: `${imgBaseUrl}/project-10-LoRaWAN/cover.png`,
@@ -272,7 +281,8 @@ export default function Projects() {
       outcome: 'ส่งมอบเอกสารข้อเสนอโครงการ (Proposal) และผลการจำลองเครือข่ายที่มีความสมบูรณ์เทียบเท่าการประมูลงานจริง แสดงให้เห็นถึงความเข้าใจด้าน Enterprise Networking, IoT Infrastructure และกระบวนการ Project Management',
       gallery: [
         { type: 'image', url: `${imgBaseUrl}/project-10-LoRaWAN/detail-1.png` },
-        { type: 'image', url: `${imgBaseUrl}/project-10-LoRaWAN/detail-2.png` }
+        { type: 'image', url: `${imgBaseUrl}/project-10-LoRaWAN/detail-2.png` },
+        { type: 'youtube', url: 'https://www.youtube.com/embed/2zLSpeHD0h0?si=koNqd4FBQea_Il-' }
       ]
     },
     {
@@ -283,7 +293,7 @@ export default function Projects() {
       techStack: ['Raspberry Pi', 'React', 'Python', 'Node-RED', 'MariaDB'],
       techStackText: 'Raspberry Pi (Core Edge Server), ESP32 (Sensor Node), Node-RED, MQTT (Mosquitto Broker), React JS (Vite, Chart.js), MariaDB (MySQL), Python (Linear Regression Model)',
       actionLinks: [
-        { type: 'document', label: 'Document', url: 'https://docs.google.com' }
+        { type: 'document', label: 'Document', url: 'https://drive.google.com/drive/folders/1HWcRuGM0zv8lYQjOdiSQbzkB9NXwEJBm?usp=sharing' }
       ],
       height: '320px',
       image: `${imgBaseUrl}/project-11-hydro/cover.png`,
@@ -296,8 +306,7 @@ export default function Projects() {
       ],
       outcome: 'ได้ระบบจัดการพลังงานแบบ End-to-End ที่สามารถทำงานได้จริงบนสถาปัตยกรรมฮาร์ดแวร์ Raspberry Pi มีหน้าแดชบอร์ดที่ตอบสนองไว (Responsive) และมีระบบแจ้งเตือนข้อผิดพลาดได้ทันที',
       gallery: [
-        { type: 'image', url: `${imgBaseUrl}/project-11-hydro/detail-1.png` },
-        { type: 'image', url: `${imgBaseUrl}/project-11-hydro/detail-2.png` }
+        { type: 'youtube', url: 'https://www.youtube.com/embed/w39QwROzdG4?si=ST4Z5hQvn-S5Sbg6' }
       ]
     },
     {
@@ -308,7 +317,7 @@ export default function Projects() {
       techStack: ['Verilog HDL', 'Xilinx'],
       techStackText: 'Verilog HDL, Xilinx (ISE/Vivado), Digital Logic Design, Instruction Set Architecture (ISA)',
       actionLinks: [
-        { type: 'document', label: 'Document', url: 'https://docs.google.com' }
+        { type: 'document', label: 'Document', url: 'https://drive.google.com/file/d/1rATVUsXJ_d5G-LEX3GkzN4JkjdZ7RJl7/view?usp=sharing' }
       ],
       height: '360px',
       image: `${imgBaseUrl}/project-12-CPU/cover.png`,
@@ -322,7 +331,10 @@ export default function Projects() {
       outcome: 'ได้ระบบ CPU 8 บิตจำลองที่สามารถประมวลผลคำสั่งทางคณิตศาสตร์และตรรกะตามสถาปัตยกรรมที่ออกแบบไว้ได้ถูกต้องสมบูรณ์ แสดงให้เห็นถึงความเข้าใจขั้นสูงในโครงสร้างการทำงานของคอมพิวเตอร์และทักษะการออกแบบวงจรดิจิทัล',
       gallery: [
         { type: 'image', url: `${imgBaseUrl}/project-12-CPU/detail-1.png` },
-        { type: 'image', url: `${imgBaseUrl}/project-12-CPU/detail-2.png` }
+        { type: 'image', url: `${imgBaseUrl}/project-12-CPU/detail-2.png` },
+        { type: 'image', url: `${imgBaseUrl}/project-12-CPU/detail-3.png` },
+        { type: 'image', url: `${imgBaseUrl}/project-12-CPU/detail-4.png` },
+        { type: 'image', url: `${imgBaseUrl}/project-12-CPU/detail-5.png` }
       ]
     },
     {
@@ -333,7 +345,7 @@ export default function Projects() {
       techStack: ['JavaScript', 'HTML5', 'CSS3'],
       techStackText: 'HTML5, CSS3, Vanilla JavaScript, Google MediaPipe (Hands)',
       actionLinks: [
-        { type: 'code', label: 'Code', url: 'https://github.com/Abasdrun' }
+        { type: 'code', label: 'Code', url: 'https://github.com/Abasdrun/air-canvas.git' }
       ],
       height: '380px',
       image: `${imgBaseUrl}/project-13-canvas/cover.png`,
@@ -346,8 +358,7 @@ export default function Projects() {
       ],
       outcome: 'ได้เว็บแอปพลิเคชันที่ทำงานลื่นไหลและตอบสนองต่อท่าทางนิ้วมือได้อย่างแม่นยำ ถือเป็นผลงานที่สะท้อนให้เห็นถึงทักษะการเขียน Front-end ที่ประยุกต์ใช้ไลบรารี AI/Computer Vision ระดับโลกมาสร้างเป็นผลิตภัณฑ์ที่ใช้งานได้จริง',
       gallery: [
-        { type: 'image', url: `${imgBaseUrl}/project-13-canvas/detail-1.png` },
-        { type: 'image', url: `${imgBaseUrl}/project-13-canvas/detail-2.png` }
+        { type: 'youtube', url: 'https://www.youtube.com/embed/vgkcmBV0Yhc' }
       ]
     },
     {
@@ -358,8 +369,7 @@ export default function Projects() {
       techStack: ['React', 'Three.js', 'Supabase'],
       techStackText: 'React, Three.js, React Three Fiber, Supabase Storage, EmailJS',
       actionLinks: [
-        { type: 'code', label: 'Code', url: 'https://github.com/Abasdrun' },
-        { type: 'document', label: 'Document', url: 'https://docs.google.com' }
+        { type: 'code', label: 'Code', url: 'https://github.com/Abasdrun/portfolio-3D' }
       ],
       height: '320px',
       image: `${imgBaseUrl}/project-14-Port/cover.png`,

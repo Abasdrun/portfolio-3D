@@ -132,14 +132,13 @@ export default function About() {
   };
 
   return (
-    // เปลี่ยนฟอนต์ทั้งหน้าให้คลีนแบบหน้าอื่นๆ
     <div id="about" ref={sectionRef} style={{ minHeight: '200vh', padding: '10vh 5vw', display: 'flex', flexDirection: 'column', alignItems: 'center', fontFamily: "Inter, 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" }}>
       
       {/* ================= โซนที่ 1: Profile & Skills ================= */}
       <div style={{
         display: 'flex', alignItems: 'center', justifyContent: 'center',
         gap: '5vw', width: '100%', maxWidth: '1400px', flexWrap: 'wrap',
-        marginBottom: '150px' 
+        marginBottom: '120px'
       }}>
         <div style={{ ...slideIn(0.1, 'left'), flex: '1.5 1 500px', display: 'flex', justifyContent: 'center', alignItems: 'flex-end' }}>
           <img src={profileImg} alt="Abasdrun Maeha" style={{ 
@@ -156,19 +155,8 @@ export default function About() {
             <h2 style={{ fontSize: '4.5rem', margin: '0 0 5px 0', fontWeight: '800', color: 'white', letterSpacing: '-1px' }}>
               Abasdrun Maeha
             </h2>
-            <p style={{ fontSize: '1.4rem', color: '#00ddff', margin: '0 0 25px 0', fontWeight: '600', letterSpacing: '0.5px' }}>
+            <p style={{ fontSize: '1.4rem', color: '#00ddff', margin: '0 0 40px 0', fontWeight: '600', letterSpacing: '0.5px' }}>
               Computer Engineering Student
-            </p>
-
-            {/* เพิ่มส่วน About me จากในรูปที่ส่งมา */}
-            <p style={{ 
-              color: '#cbd5e1', 
-              fontSize: '1.1rem', 
-              lineHeight: '1.8', 
-              margin: '0 0 40px 0', 
-              maxWidth: '95%' 
-            }}>
-              4th-year Computer Engineering student (GPAX 3.77) seeking a 4-month Co-op placement. Specialized in end-to-end development, combining Full-Stack apps, AWS Cloud, and Industrial IoT. Experienced in integrating hardware (ESP32, Raspberry Pi) with complex backends and ML models to build scalable automation solutions.
             </p>
           </div>
 
@@ -213,16 +201,26 @@ export default function About() {
         </div>
       </div>
 
-      {/* ================= โซนที่ 2: Experience & Education ================= */}
-      <div style={{ width: '100%', maxWidth: '1200px', paddingTop: '5vh', paddingBottom: '150px' }}>
+      {/* ================= โซนที่ 2: About Me & Experience ================= */}
+      <div style={{ width: '100%', maxWidth: '1200px', display: 'flex', flexDirection: 'column', alignItems: 'center', paddingBottom: '150px' }}>
         
+        {/* --- ส่วน About Me ชิดซ้าย กว้าง 100% --- */}
+        <div style={{ ...popIn3D(0.1), width: '100%', textAlign: 'left', marginBottom: '100px', background: 'rgba(255,255,255,0.02)', padding: '40px 50px', borderRadius: '24px', border: '1px solid rgba(255,255,255,0.05)' }}>
+          <p style={{ color: '#00ddff', fontWeight: '700', letterSpacing: '2px', margin: '0 0 15px 0', textTransform: 'uppercase', fontSize: '0.9rem' }}>
+            About Me
+          </p>
+          <p style={{ color: '#cbd5e1', fontSize: '1.15rem', lineHeight: '1.8', margin: 0, fontWeight: '400' }}>
+          4th-year Computer Engineering student (GPAX 3.77) seeking a 4-month Cooperative Education placement. Specialized in end-to-end system development, encompassing Full-Stack web/mobile applications, Cloud deployment (AWS), and Industrial IoT architectures. Proven ability to integrate hardware microcontrollers (ESP32, Raspberry Pi) with complex backend databases and machine learning models. Eager to leverage system engineering, automation, and full-cycle development skills in a challenging technical environment.
+          </p>
+        </div>
+
         <div style={popIn3D(0.2)}>
           <h2 style={{ fontSize: '3rem', color: 'white', margin: '0 0 60px 0', fontWeight: '800', letterSpacing: '-0.5px', textAlign: 'center' }}>
             Experience & Education
           </h2>
         </div>
 
-        <div style={{ display: 'flex', justifyContent: 'center', gap: '30px', flexWrap: 'wrap' }}>
+        <div style={{ display: 'flex', justifyContent: 'center', gap: '30px', flexWrap: 'wrap', width: '100%' }}>
           
           {/* --- 1. Work: 7-Eleven --- */}
           <div style={{ ...popIn3D(0.3), ...squareCardStyle }} onMouseMove={handleMouseMove} onMouseLeave={handleMouseLeave}>

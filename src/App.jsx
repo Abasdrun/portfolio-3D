@@ -58,7 +58,7 @@ function App() {
       <div style={{ width: '100vw', height: '100vh' }}>
         <Canvas camera={{ position: [0, 3, 5], fov: 60 }}>
           {/* 3. ถ้าเป็นมือถือ ให้ยาว 26 หน้า ถ้าคอมให้ยาว 16 หน้า */}
-          <ScrollControls pages={isMobile ? 26 : 16} damping={0.2}>
+          <ScrollControls pages={isMobile ? 26 : 12} damping={0.2}>
             
             <group rotation={[-0.2, 0, 0]}>
               <Galaxy explode={explode} />
