@@ -66,7 +66,6 @@ export default function About() {
   })
 
   const handleMouseMove = (e) => {
-    if (window.innerWidth < 768) return; // ปิดเอฟเฟกต์ 3D ตอนโฮเวอร์บนมือถือ
     const card = e.currentTarget;
     const rect = card.getBoundingClientRect();
     const x = e.clientX - rect.left;
@@ -93,7 +92,6 @@ export default function About() {
   };
 
   const handleMouseLeave = (e) => {
-    if (window.innerWidth < 768) return;
     const card = e.currentTarget;
     card.style.transition = 'all 0.6s cubic-bezier(0.16, 1, 0.3, 1)';
     card.style.transform = 'perspective(1200px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)';
@@ -101,6 +99,23 @@ export default function About() {
 
     const flare = card.querySelector('.flare-light');
     if (flare) flare.style.opacity = 0;
+  };
+
+  const squareCardStyle = {
+    flex: '1 1 320px', 
+    aspectRatio: '1 / 1', 
+    background: 'linear-gradient(145deg, rgba(12, 16, 26, 0.95) 0%, rgba(6, 9, 15, 0.95) 100%)',
+    border: '1px solid rgba(255, 255, 255, 0.05)',
+    borderRadius: '24px',
+    padding: '35px 30px 30px 30px',
+    position: 'relative',
+    transformStyle: 'preserve-3d',
+    cursor: 'default',
+    boxShadow: '0 20px 40px rgba(0,0,0,0.4)',
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'flex-start',
+    gap: '20px'
   };
 
   const innerLogoStyle = {
@@ -119,65 +134,41 @@ export default function About() {
   return (
     <div id="about" ref={sectionRef} style={{ minHeight: '200vh', padding: '10vh 5vw', display: 'flex', flexDirection: 'column', alignItems: 'center', fontFamily: "Inter, 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" }}>
       
-      {/* CSS ควบคุม Responsive */}
-      <style>{`
-        .responsive-name { font-size: clamp(2.5rem, 8vw, 4.5rem); margin: 0 0 5px 0; font-weight: 800; color: white; letter-spacing: -1px; }
-        .responsive-role { font-size: clamp(1.1rem, 4vw, 1.4rem); color: #00ddff; margin: 0 0 40px 0; font-weight: 600; letter-spacing: 0.5px; }
-        .responsive-heading { font-size: clamp(2rem, 6vw, 3rem); color: white; margin: 0 0 60px 0; font-weight: 800; letter-spacing: -0.5px; text-align: center; }
-        
-        .mbti-container {
-          background: linear-gradient(90deg, rgba(0, 221, 255, 0.05) 0%, transparent 100%);
-          padding: 20px 25px; display: flex; gap: 30px; align-items: center; margin-bottom: 40px; border-radius: 16px;
-        }
-        
-        .about-me-box {
-          width: 100%; text-align: left; margin-bottom: 100px; background: rgba(255,255,255,0.02); 
-          padding: 40px 50px; border-radius: 24px; border: 1px solid rgba(255,255,255,0.05);
-        }
-
-        .square-card {
-          flex: 1 1 320px; aspect-ratio: 1 / 1; 
-          background: linear-gradient(145deg, rgba(12, 16, 26, 0.95) 0%, rgba(6, 9, 15, 0.95) 100%);
-          border: 1px solid rgba(255, 255, 255, 0.05); border-radius: 24px; padding: 35px 30px 30px 30px;
-          position: relative; transform-style: preserve-3d; cursor: default; box-shadow: 0 20px 40px rgba(0,0,0,0.4);
-          display: flex; flex-direction: column; justify-content: flex-start; gap: 20px;
-        }
-
-        @media (max-width: 768px) {
-          .mbti-container { flex-direction: column; text-align: center; gap: 15px; padding: 20px; }
-          .mbti-container img { width: 90px !important; height: 90px !important; }
-          .about-me-box { padding: 25px 20px; text-align: center; }
-          .square-card { aspect-ratio: auto; padding: 25px 20px; min-height: 350px; }
-          .profile-img-container { order: -1; margin-bottom: 20px; } /* ดึงรูปโปรไฟล์ขึ้นบนสุด */
-        }
-      `}</style>
-
       {/* ================= โซนที่ 1: Profile & Skills ================= */}
-      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '5vw', width: '100%', maxWidth: '1400px', flexWrap: 'wrap', marginBottom: '120px' }}>
-        
-        {/* รูปโปรไฟล์ */}
-        <div className="profile-img-container" style={{ ...slideIn(0.1, 'left'), flex: '1.5 1 400px', display: 'flex', justifyContent: 'center', alignItems: 'flex-end' }}>
+      <div style={{
+        display: 'flex', alignItems: 'center', justifyContent: 'center',
+        gap: '5vw', width: '100%', maxWidth: '1400px', flexWrap: 'wrap',
+        marginBottom: '120px'
+      }}>
+        <div style={{ ...slideIn(0.1, 'left'), flex: '1.5 1 500px', display: 'flex', justifyContent: 'center', alignItems: 'flex-end' }}>
           <img src={profileImg} alt="Abasdrun Maeha" style={{ 
             width: '100%', maxWidth: '800px', height: 'auto', objectFit: 'contain', 
-            filter: 'drop-shadow(0 0 40px rgba(68, 119, 255, 0.3))', transform: 'scale(1.1)',
+            filter: 'drop-shadow(0 0 40px rgba(68, 119, 255, 0.3))', 
+            transform: 'scale(1.1)',
             WebkitMaskImage: 'linear-gradient(to bottom, black 70%, transparent 100%)',
             maskImage: 'linear-gradient(to bottom, black 70%, transparent 100%)'
           }} />
         </div>
 
-        {/* ข้อมูล */}
-        <div style={{ flex: '1 1 400px', zIndex: 10 }}>
+        <div style={{ flex: '1 1 500px', zIndex: 10 }}>
           <div style={slideIn(0.3, 'right')}>
-            <h2 className="responsive-name">Abasdrun Maeha</h2>
-            <p className="responsive-role">Computer Engineering Student</p>
+            <h2 style={{ fontSize: '4.5rem', margin: '0 0 5px 0', fontWeight: '800', color: 'white', letterSpacing: '-1px' }}>
+              Abasdrun Maeha
+            </h2>
+            <p style={{ fontSize: '1.4rem', color: '#00ddff', margin: '0 0 40px 0', fontWeight: '600', letterSpacing: '0.5px' }}>
+              Computer Engineering Student
+            </p>
           </div>
 
           <div style={slideIn(0.5, 'up')}>
-            <div className="mbti-container">
+            <div style={{
+              background: 'linear-gradient(90deg, rgba(0, 221, 255, 0.05) 0%, transparent 100%)',
+              padding: '20px 25px', display: 'flex', gap: '30px', alignItems: 'center', marginBottom: '40px', borderRadius: '16px' 
+            }}>
               <img src={mbtiIcon} alt="ENTJ Icon" style={{ width: '130px', height: '130px', objectFit: 'contain', filter: 'drop-shadow(0 0 15px rgba(0, 221, 255, 0.4))' }} />
               <div>
                 <p style={{ margin: '0 0 5px 0', color: '#aaaaaa', fontSize: '1rem' }}>ประเภทบุคลิกภาพ MBTI :</p>
-                <h4 style={{ margin: '0 0 8px 0', color: 'white', fontSize: 'clamp(1.2rem, 4vw, 1.4rem)', fontWeight: '700' }}>ผู้บัญชาการ (ENTJ-A)</h4>
+                <h4 style={{ margin: '0 0 8px 0', color: 'white', fontSize: '1.4rem', fontWeight: '700' }}>ผู้บัญชาการ (ENTJ-A)</h4>
                 <p style={{ margin: 0, color: '#cccccc', fontSize: '1.05rem', lineHeight: '1.6', fontStyle: 'italic' }}>
                   "ผู้บัญชาการกล้าหาญ มีจินตนาการ และมีปณิธานกล้าแกร่ง มักหาทางออกหรือสร้างทางออกขึ้นมาได้"
                 </p>
@@ -187,18 +178,21 @@ export default function About() {
 
           <div style={slideIn(0.7, 'up')}>
             <p style={{ margin: '0 0 15px 0', color: '#aaaaaa', fontSize: '1.1rem', fontWeight: '600' }}>Technical Skills & Tools :</p>
-            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '12px', justifyContent: 'flex-start' }}>
+            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '12px' }}>
               {skills.map((skill, index) => (
                 <div key={skill.name} style={{
                     opacity: isVisible ? 1 : 0, transform: isVisible ? 'translateY(0) scale(1)' : 'translateY(20px) scale(0.5)',
                     transition: `all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) ${0.8 + (index * 0.04)}s`
                   }}>
                   <div title={skill.name} style={{
-                      width: '50px', height: '50px', display: 'flex', justifyContent: 'center', alignItems: 'center',
+                      width: '55px', height: '55px', display: 'flex', justifyContent: 'center', alignItems: 'center',
                       background: 'rgba(20, 30, 50, 0.6)', border: '1px solid rgba(68, 119, 255, 0.3)', borderRadius: '12px', 
-                      boxShadow: '0 5px 0 rgba(68, 119, 255, 0.4), 0 10px 15px rgba(0,0,0,0.5)', 
-                    }}>
-                    <img src={skill.icon} alt={skill.name} style={{ width: skill.name === 'AWS' ? '35px' : '28px', height: '28px', objectFit: 'contain', filter: 'drop-shadow(0 0 5px rgba(255,255,255,0.2))' }} />
+                      cursor: 'pointer', boxShadow: '0 5px 0 rgba(68, 119, 255, 0.4), 0 10px 15px rgba(0,0,0,0.5)', 
+                      transform: 'translateY(0)', transition: 'all 0.15s ease'
+                    }}
+                    onMouseOver={e => { e.currentTarget.style.transform = 'translateY(5px)'; e.currentTarget.style.boxShadow = '0 0px 0 rgba(68, 119, 255, 0.4), 0 5px 8px rgba(0,0,0,0.6)'; e.currentTarget.style.background = 'rgba(40, 60, 100, 0.8)'; }}
+                    onMouseOut={e => { e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.boxShadow = '0 5px 0 rgba(68, 119, 255, 0.4), 0 10px 15px rgba(0,0,0,0.5)'; e.currentTarget.style.background = 'rgba(20, 30, 50, 0.6)'; }}>
+                    <img src={skill.icon} alt={skill.name} style={{ width: skill.name === 'AWS' ? '40px' : '32px', height: '32px', objectFit: 'contain', filter: 'drop-shadow(0 0 5px rgba(255,255,255,0.2))' }} />
                   </div>
                 </div>
               ))}
@@ -208,25 +202,28 @@ export default function About() {
       </div>
 
       {/* ================= โซนที่ 2: About Me & Experience ================= */}
-      <div style={{ width: '100%', maxWidth: '1200px', display: 'flex', flexDirection: 'column', alignItems: 'center', paddingBottom: '100px' }}>
+      <div style={{ width: '100%', maxWidth: '1200px', display: 'flex', flexDirection: 'column', alignItems: 'center', paddingBottom: '150px' }}>
         
-        <div className="about-me-box" style={popIn3D(0.1)}>
+        {/* --- ส่วน About Me ชิดซ้าย กว้าง 100% --- */}
+        <div style={{ ...popIn3D(0.1), width: '100%', textAlign: 'left', marginBottom: '100px', background: 'rgba(255,255,255,0.02)', padding: '40px 50px', borderRadius: '24px', border: '1px solid rgba(255,255,255,0.05)' }}>
           <p style={{ color: '#00ddff', fontWeight: '700', letterSpacing: '2px', margin: '0 0 15px 0', textTransform: 'uppercase', fontSize: '0.9rem' }}>
             About Me
           </p>
-          <p style={{ color: '#cbd5e1', fontSize: 'clamp(1rem, 3.5vw, 1.15rem)', lineHeight: '1.8', margin: 0, fontWeight: '400' }}>
-            4th-year Computer Engineering student (GPAX 3.77) seeking a 4-month Co-op placement. Specialized in end-to-end development, combining Full-Stack apps, AWS Cloud, and Industrial IoT. Experienced in integrating hardware (ESP32, Raspberry Pi) with complex backends and ML models to build scalable automation solutions.
+          <p style={{ color: '#cbd5e1', fontSize: '1.15rem', lineHeight: '1.8', margin: 0, fontWeight: '400' }}>
+          4th-year Computer Engineering student (GPAX 3.77) seeking a 4-month Cooperative Education placement. Specialized in end-to-end system development, encompassing Full-Stack web/mobile applications, Cloud deployment (AWS), and Industrial IoT architectures. Proven ability to integrate hardware microcontrollers (ESP32, Raspberry Pi) with complex backend databases and machine learning models. Eager to leverage system engineering, automation, and full-cycle development skills in a challenging technical environment.
           </p>
         </div>
 
         <div style={popIn3D(0.2)}>
-          <h2 className="responsive-heading">Experience & Education</h2>
+          <h2 style={{ fontSize: '3rem', color: 'white', margin: '0 0 60px 0', fontWeight: '800', letterSpacing: '-0.5px', textAlign: 'center' }}>
+            Experience & Education
+          </h2>
         </div>
 
         <div style={{ display: 'flex', justifyContent: 'center', gap: '30px', flexWrap: 'wrap', width: '100%' }}>
           
           {/* --- 1. Work: 7-Eleven --- */}
-          <div className="square-card" style={popIn3D(0.3)} onMouseMove={handleMouseMove} onMouseLeave={handleMouseLeave}>
+          <div style={{ ...popIn3D(0.3), ...squareCardStyle }} onMouseMove={handleMouseMove} onMouseLeave={handleMouseLeave}>
             <div className="flare-light" style={{ position: 'absolute', width: '400px', height: '400px', background: 'radial-gradient(circle, rgba(0, 221, 255, 0.08) 0%, transparent 60%)', borderRadius: '50%', pointerEvents: 'none', opacity: 0, transition: 'opacity 0.4s ease', zIndex: 0 }}></div>
             
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', position: 'relative', zIndex: 2 }}>
@@ -249,7 +246,7 @@ export default function About() {
           </div>
 
           {/* --- 2. Education: SPU --- */}
-          <div className="square-card" style={popIn3D(0.5)} onMouseMove={handleMouseMove} onMouseLeave={handleMouseLeave}>
+          <div style={{ ...popIn3D(0.5), ...squareCardStyle }} onMouseMove={handleMouseMove} onMouseLeave={handleMouseLeave}>
             <div className="flare-light" style={{ position: 'absolute', width: '400px', height: '400px', background: 'radial-gradient(circle, rgba(255, 40, 100, 0.08) 0%, transparent 60%)', borderRadius: '50%', pointerEvents: 'none', opacity: 0, transition: 'opacity 0.4s ease', zIndex: 0 }}></div>
             
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', position: 'relative', zIndex: 2 }}>
@@ -273,7 +270,7 @@ export default function About() {
           </div>
 
           {/* --- 3. Education: KPS --- */}
-          <div className="square-card" style={popIn3D(0.7)} onMouseMove={handleMouseMove} onMouseLeave={handleMouseLeave}>
+          <div style={{ ...popIn3D(0.7), ...squareCardStyle }} onMouseMove={handleMouseMove} onMouseLeave={handleMouseLeave}>
             <div className="flare-light" style={{ position: 'absolute', width: '400px', height: '400px', background: 'radial-gradient(circle, rgba(0, 221, 255, 0.08) 0%, transparent 60%)', borderRadius: '50%', pointerEvents: 'none', opacity: 0, transition: 'opacity 0.4s ease', zIndex: 0 }}></div>
             
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', position: 'relative', zIndex: 2 }}>
