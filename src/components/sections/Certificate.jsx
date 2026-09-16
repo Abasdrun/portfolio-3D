@@ -14,16 +14,16 @@ export default function Certificate() {
       title: 'AWS Academy', 
       category: 'Cloud & Network', 
       image: 'https://ycvrqcrekarkhxtainkd.supabase.co/storage/v1/object/public/portfolio-images/certificates/AWS%20Academy%20Graduate%20-%20Machine%20Learning%20Foundations%20-%20Training%20Badge.png', 
-      description: 'เกียรติบัตรจาก AWS Academy รับรองว่าได้เรียนจบและผ่านหลักสูตร AWS Academy Graduate - Machine Learning Foundations',
+      description: 'เกียรติบัตรจาก HUAWEI ICT ACADEMY รับรองว่าได้เรียนจบและผ่านหลักสูตร IoT Architecture and IoT E2E solution',
       date: 'ออกให้เมื่อวันที่ 4 กุมภาพันธ์ 2569'
     },
     { 
-      id: 6, 
-      title: 'BORNTO DEV', 
-      category: 'Web & Mobile', 
-      image: 'https://ycvrqcrekarkhxtainkd.supabase.co/storage/v1/object/public/portfolio-images/certificates/ChatGPT%20for%20Developers.png', 
+      id: 2, 
+      title: 'HUAWEI ICT ACADEMY', 
+      category: 'Hardware & Engineering', 
+      image: 'https://ycvrqcrekarkhxtainkd.supabase.co/storage/v1/object/public/portfolio-images/certificates/HCIA-IoT%20V3.0%20Course.png', 
       description: 'เกียรติบัตร จาก BORNTO DEV (Open Access Academy) รับรองว่าได้เรียนจบและผ่านหลักสูตร ChatGPT for Developers',
-      date: 'ออกให้เมื่อวันที่ 20 สิงหาคม 2568'
+      date: 'ออกให้เมื่อวันที่ 16 กันยายน 2569'
     },
     { 
       id: 3, 
@@ -35,7 +35,7 @@ export default function Certificate() {
     },
     { id: 4, title: 'AWS Academy', category: 'Data & AI', image: 'https://ycvrqcrekarkhxtainkd.supabase.co/storage/v1/object/public/portfolio-images/certificates/AWS%20Academy%20Graduate%20-%20Generative%20AI%20Foundations%20-%20Training%20Badge.png', description: 'เกียรติบัตรจาก AWS Academy รับรองว่าได้เรียนจบและผ่านหลักสูตร AWS Academy Graduate - Generative Al Foundations - Training Badge', date: 'ออกให้เมื่อวันที่ 15 กันยายน 2569' },
     { id: 5, title: 'BORNTO DEV', category: 'Web & Mobile', image: 'https://ycvrqcrekarkhxtainkd.supabase.co/storage/v1/object/public/portfolio-images/certificates/Introduction%20to%20JavaScript.png', description: 'เกียรติบัตร BORNTO DEV (Open Access Academy) เป็นเกียรติบัตรที่รับรองว่า ได้เรียนจบและผ่านหลักสูตร Introduction to JavaScript', date: 'ออกให้เมื่อวันที่ 25 สิงหาคม 2568' },
-    { id: 2, title: 'HUAWEI ICT ACADEMY', category: 'Hardware & Engineering', image: 'https://ycvrqcrekarkhxtainkd.supabase.co/storage/v1/object/public/portfolio-images/certificates/HCIA-IoT%20V3.0%20Course.png', description: 'วุฒิบัตรจาก HUAWEI ICT ACADEMY รับรองว่าได้เรียนจบและผ่านหลักสูตร IoT Architecture and IoT E2E solution', date: 'ออกให้เมื่อวันที่ 16 กันยายน 2569' },
+    { id: 6, title: 'BORNTO DEV', category: 'Web & Mobile', image: 'https://ycvrqcrekarkhxtainkd.supabase.co/storage/v1/object/public/portfolio-images/certificates/ChatGPT%20for%20Developers.png', description: 'เกียรติบัตร จาก BORNTO DEV (Open Access Academy) รับรองว่าได้เรียนจบและผ่านหลักสูตร ChatGPT for Developers', date: 'ออกให้เมื่อวันที่ 20 สิงหาคม 2568' },
     { id: 7, title: 'Chula Mooc', category: 'Data & AI', image: 'https://ycvrqcrekarkhxtainkd.supabase.co/storage/v1/object/public/portfolio-images/certificates/Learn%20Coding%20Basics%20with%20Block-based%20Programming.jpg', description: 'ประกาศนียบัตรจาก Chula MOOC (จุฬาลงกรณ์มหาวิทยาลัย) รับรองว่าได้ผ่านการเรียนออนไลน์ตามเกณฑ์ในคอร์ส Learn Coding Basics with Block-based Programming (เรียนรู้พื้นฐานการโค้ดผ่านการทำโปรแกรมแบบบล็อก)', date: 'ออกให้เมื่อวันที่ 22 สิงหาคม 2568' },
     { id: 8, title: 'BORNTO DEV', category: 'Cloud & Network', image: 'https://ycvrqcrekarkhxtainkd.supabase.co/storage/v1/object/public/portfolio-images/certificates/GitHub%20for%20Developer%20.png', description: 'เกียรติบัตร จาก BORNTO DEV (Open Access Academy) รับรองว่าได้เรียนจบและผ่านหลักสูตร GitHub for Developer', date: 'ออกให้เมื่อวันที่ 17 พฤษภาคม 2567' },
     { id: 9, title: 'BORNTO DEV', category: 'Web & Mobile', image: 'https://ycvrqcrekarkhxtainkd.supabase.co/storage/v1/object/public/portfolio-images/certificates/Essential%20SQL%20for%20Everyone_certificate.png', description: 'เกียรติบัตรจาก BORNTO DEV (Open Access Academy) รับรองว่าได้เรียนจบและผ่านหลักสูตร Essential SQL for Everyone', date: 'ออกให้เมื่อวันที่ 22 สิงหาคม 2568' },
