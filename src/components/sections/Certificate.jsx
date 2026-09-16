@@ -14,7 +14,7 @@ export default function Certificate() {
       title: 'AWS Academy', 
       category: 'Cloud & Network', 
       image: 'https://ycvrqcrekarkhxtainkd.supabase.co/storage/v1/object/public/portfolio-images/certificates/AWS%20Academy%20Graduate%20-%20Machine%20Learning%20Foundations%20-%20Training%20Badge.png', 
-      description: 'เกียรติบัตรจาก HUAWEI ICT ACADEMY รับรองว่าได้เรียนจบและผ่านหลักสูตร IoT Architecture and IoT E2E solution',
+      description: 'เกียรติบัตรจาก AWS Academy รับรองว่าได้เรียนจบและผ่านหลักสูตร AWS Academy Graduate - Machine Learning Foundations - Training Badge',
       date: 'ออกให้เมื่อวันที่ 4 กุมภาพันธ์ 2569'
     },
     { 
@@ -22,7 +22,7 @@ export default function Certificate() {
       title: 'HUAWEI ICT ACADEMY', 
       category: 'Hardware & Engineering', 
       image: 'https://ycvrqcrekarkhxtainkd.supabase.co/storage/v1/object/public/portfolio-images/certificates/HCIA-IoT%20V3.0%20Course.png', 
-      description: 'เกียรติบัตร จาก BORNTO DEV (Open Access Academy) รับรองว่าได้เรียนจบและผ่านหลักสูตร ChatGPT for Developers',
+      description: 'เกียรติบัตรจาก HUAWEI ICT ACADEMY รับรองว่าได้เรียนจบและผ่านหลักสูตร IoT Architecture and IoT E2E solution',
       date: 'ออกให้เมื่อวันที่ 16 กันยายน 2569'
     },
     { 
