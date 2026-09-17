@@ -262,7 +262,7 @@ export default function Projects() {
     {
       id: 10,
       title: 'LoRaWAN for Industrial Container Tracking',
-      category: 'Hardware & IoT',
+      category: 'Software & Syste',
       role: 'Network Infrastructure Analyst & Project Planner',
       techStack: ['Cisco Packet Tracer', 'Node-RED', 'ThingsBoard', 'Microsoft Word'],
       techStackText: 'LoRaWAN (AS923 Standard), Cisco Infrastructure (Catalyst IR1101, IE3300), ThingsBoard, Node-RED, Network Simulation',
