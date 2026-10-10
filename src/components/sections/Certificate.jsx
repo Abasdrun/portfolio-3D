@@ -27,11 +27,11 @@ export default function Certificate() {
     },
     { 
       id: 3, 
-      title: 'CHULA MOOC', 
+      title: 'ERT & AWS', 
       category: 'Data & AI', 
-      image: 'https://ycvrqcrekarkhxtainkd.supabase.co/storage/v1/object/public/portfolio-images/certificates/Introduction%20to%20data%20analytics%20and%20data.jpg', 
-      description: 'เกียรติบัตรจาก CHULA MOOC (จุฬาลงกรณ์มหาวิทยาลัย) รับรองว่าได้เรียนจบคอร์สออนไลน์ ในหลักสูตร Introduction to data analytics and big data (ความรู้เบื้องต้นเกี่ยวกับการวิเคราะห์ข้อมูลและบิ๊กดาต้า)',
-      date: 'ออกให้เมื่อวันที่ 22 สิงหาคม 2568'
+      image: 'https://ycvrqcrekarkhxtainkd.supabase.co/storage/v1/object/public/portfolio-images/certificates/AWS%20Generative%20Al%20Foundation%20Program%20including%20Party%20Rock%20Challenge.png', 
+      description: 'เกียรติบัตรจาก ERT & AWS รับรองว่าได้เรียนจบและผ่านหลักสูตร AWS Generative Al Foundation Program including Party Rock Challenge',
+      date: 'ออกให้เมื่อวันที่ 14-15 กันยายน 2569'
     },
     { id: 4, title: 'AWS Academy', category: 'Data & AI', image: 'https://ycvrqcrekarkhxtainkd.supabase.co/storage/v1/object/public/portfolio-images/certificates/AWS%20Academy%20Graduate%20-%20Generative%20AI%20Foundations%20-%20Training%20Badge.png', description: 'เกียรติบัตรจาก AWS Academy รับรองว่าได้เรียนจบและผ่านหลักสูตร AWS Academy Graduate - Generative Al Foundations - Training Badge', date: 'ออกให้เมื่อวันที่ 15 กันยายน 2569' },
     { id: 5, title: 'BORNTO DEV', category: 'Web & Mobile', image: 'https://ycvrqcrekarkhxtainkd.supabase.co/storage/v1/object/public/portfolio-images/certificates/Introduction%20to%20JavaScript.png', description: 'เกียรติบัตร BORNTO DEV (Open Access Academy) เป็นเกียรติบัตรที่รับรองว่า ได้เรียนจบและผ่านหลักสูตร Introduction to JavaScript', date: 'ออกให้เมื่อวันที่ 25 สิงหาคม 2568' },
@@ -43,7 +43,7 @@ export default function Certificate() {
     { id: 11, title: 'TH AI PASSPORT', category: 'Data & AI', image: 'https://ycvrqcrekarkhxtainkd.supabase.co/storage/v1/object/public/portfolio-images/certificates/certificate%20(1).jpeg', description: 'เกียรติบัตร จาก สำนักงานคณะกรรมการดิจิทัลเพื่อเศรษฐกิจและสังคมแห่งชาติ รับรองว่าได้เรียนจบคอร์สการฝึกอบรม เปิดโลก AI สู่โอกาสใหม่ในชีวิตและงาน', date: 'ออกให้เมื่อวันที่ 3 กันยายน 2569' },
     { id: 12, title: 'MathWorks Training Services', category: 'Hardware & Engineering', image: 'https://ycvrqcrekarkhxtainkd.supabase.co/storage/v1/object/public/portfolio-images/certificates/Course%20MathWorke.jpg', description: 'เกียรติบัตร จาก MathWorks Training Services รับรองว่าได้เรียนจบคอร์สการฝึกอบรมแบบ self-paced หลักสูตร MATLAB Onramp', date: 'ออกให้เมื่อวันที่ 9 กุมภาพันธ์ 2567' },
     { id: 13, title: 'SET', category: 'Others', image: 'https://ycvrqcrekarkhxtainkd.supabase.co/storage/v1/object/public/portfolio-images/certificates/image.png', description: 'วุฒิบัตรจาก SET (The Stock Exchange of Thailand) รับรองว่าได้ผ่านการเรียน e-Learning ครบถ้วนตามหลักสูตร UX Development', date: 'ออกให้เมื่อวันที่ 25 พฤษภาคม 2567' },
-    { id: 14, title: 'TH AI PASSPORT', category: 'Data & AI', image: 'https://ycvrqcrekarkhxtainkd.supabase.co/storage/v1/object/public/portfolio-images/certificates/certificate.jpeg', description: 'เกียรติบัตร จาก สำนักงานคณะกรรมการดิจิทัลเพื่อเศรษฐกิจและสังคมแห่งชาติ รับรองว่าได้เรียนจบคอร์สการฝึกอบรม เพิ่มประสิทธิภาพงานประจำวันด้วย AI', date: 'ออกให้เมื่อวันที่ 3 กันยายน 2569' },
+    { id: 14, title: 'CHULA MOOC', category: 'Data & AI', image: 'https://ycvrqcrekarkhxtainkd.supabase.co/storage/v1/object/public/portfolio-images/certificates/Introduction%20to%20data%20analytics%20and%20data.jpg', description: 'เกียรติบัตรจาก CHULA MOOC (จุฬาลงกรณ์มหาวิทยาลัย) รับรองว่าได้เรียนจบคอร์สออนไลน์ ในหลักสูตร Introduction to data analytics and big data (ความรู้เบื้องต้นเกี่ยวกับการวิเคราะห์ข้อมูลและบิ๊กดาต้า)', date: 'ออกให้เมื่อวันที่ 22 สิงหาคม 2568' },
   ]
 
   const filteredCertificates = activeFilter === 'All' 
